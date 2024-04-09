@@ -1,32 +1,38 @@
-import React from 'react'
+import React from 'react';
+import doc1 from './doc1.jpeg';
+import doc2 from './doc2.jpeg';
+import doc3 from './doc3.jpeg';
+import doc4 from './doc4.jpeg';
+import './About.css';
 
-export default function About() {
-  return (
-      <div className="py-16 bg-white">
-          <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-              <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
-                  <div className="md:5/12 lg:w-5/12">
-                      <img
-                          src="https://tailus.io/sources/blocks/left-image/preview/images/startup.png"
-                          alt="image"
-                      />
-                  </div>
-                  <div className="md:7/12 lg:w-6/12">
-                      <h2 className="text-2xl text-gray-900 font-bold md:text-4xl">
-                          React development is carried out by passionate developers
-                      </h2>
-                      <p className="mt-6 text-gray-600">
-                          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis voluptatem
-                          accusantium nemo perspiciatis delectus atque autem! Voluptatum tenetur beatae unde
-                          aperiam, repellat expedita consequatur! Officiis id consequatur atque doloremque!
-                      </p>
-                      <p className="mt-4 text-gray-600">
-                          Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at?
-                          Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia.
-                      </p>
-                  </div>
-              </div>
+class About extends React.Component {
+  render() {
+    const backgroundImageUrl = "https://png.pngtree.com/background/20210709/original/pngtree-medical-gradient-color-doctors-picture-image_917752.jpg";
+
+    return (
+      <div className="slider-container min-h-screen flex justify-center items-center" style={{ backgroundImage: `url(${backgroundImageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="max-w-screen-lg mx-auto">
+          <h1 className="text-4xl font-bold text-center mb-8 text-gray-800 font-serif">Surgical Procedures Gallery</h1>
+
+          <div className="slider">
+            <div className="slide">
+              <img src={doc1} alt="Document 1" />
+            </div>
+            <div className="slide">
+              <img src={doc2} alt="Document 2" />
+            </div>
+            <div className="slide">
+              <img src={doc3} alt="Document 3" />
+            </div>
+            <div className="slide">
+              <img src={doc4} alt="Document 4" />
+            </div>
           </div>
+          <p>Slide here for more images --> </p>
+        </div>
       </div>
-  );
+    );
+  }
 }
+
+export default About;

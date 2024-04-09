@@ -1,48 +1,55 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Home() {
-    return (
-        <div className="mx-auto w-full max-w-7xl">
-            <aside className="relative overflow-hidden text-black rounded-lg sm:mx-16 mx-2 sm:py-16">
-                <div className="relative z-10 max-w-screen-xl px-4  pb-20 pt-10 sm:py-24 mx-auto sm:px-6 lg:px-8">
-                    <div className="max-w-xl sm:mt-1 mt-80 space-y-8 text-center sm:text-right sm:ml-auto">
-                    <h2 className="text-4xl font-bold text-purple-700 bg-purple-200 py-2 px-4 rounded-lg sm:text-5xl">
-    Hey : This is Yashi
-    <span className="hidden sm:inline-block text-4xl ml-4">Hope u like this page</span>
-</h2>
+const Home = () => {
+  const backgroundImageUrl = "https://i.pinimg.com/736x/b1/6f/68/b16f68d504794eb2dd223dcc0bbe4c29.jpg"; 
 
-                        <Link
-                            className="inline-flex text-white items-center px-6 py-3 font-medium bg-orange-700 rounded-lg hover:opacity-75"
-                            to="/"
-                        >
-                            <svg
-                                fill="white"
-                                width="24"
-                                height="24"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fillRule="evenodd"
-                                clipRule="evenodd"
-                            >
-                                <path d="M1.571 23.664l10.531-10.501 3.712 3.701-12.519 6.941c-.476.264-1.059.26-1.532-.011l-.192-.13zm9.469-11.56l-10.04 10.011v-20.022l10.04 10.011zm6.274-4.137l4.905 2.719c.482.268.781.77.781 1.314s-.299 1.046-.781 1.314l-5.039 2.793-4.015-4.003 4.149-4.137zm-15.854-7.534c.09-.087.191-.163.303-.227.473-.271 1.056-.275 1.532-.011l12.653 7.015-3.846 3.835-10.642-10.612z" />
-                            </svg>
-                            &nbsp; github: yamisingh99
-                        </Link>
-                    </div>
-                </div>
-
-                <div className="absolute inset-0 flex ">
-    <img className="object-cover max-w-full max-h-full left-0 " src="https://image.lexica.art/full_jpg/18dffe13-a4a5-4e2a-a880-d7c4008e5491" alt="image1" />
-</div>
-
-
-            </aside>
-
-            <div className="grid  place-items-center sm:mt-20">
-                <img className="sm:w-96 w-48" src="https://i.ibb.co/2M7rtLk/Remote1.png" alt="image2" />
-            </div>
-
-            <h1 className="text-center text-2xl sm:text-5xl py-10 font-medium">Yamisingh.io.reserve</h1>
+  return (
+    <div className="h-screen flex flex-col justify-center items-center bg-gray-100" style={{ backgroundImage: `url(${backgroundImageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <div className="w-full md:w-3/4 flex flex-col justify-center items-center px-8">
+        <img
+          src="https://img.freepik.com/premium-photo/bright-cheerful-hospice-hospital-healthcare-worker_888204-320.jpg"
+          className="h-48 w-48 rounded-full mb-8"
+          alt="Doctor"
+        />
+        <h1 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-4">
+          The Best & Experienced Doctor for Youth is here to help you
+        </h1>
+        <h2 className="text-4xl font-bold text-red-500 mb-8">Dr. MANISH SINGH</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-2">Years of Experience</h3>
+            <p className="text-gray-700">20+ Years</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-2">1K+ Machines & Tools</h3>
+            <p className="text-gray-700">State-of-the-art equipment</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-2">Govt Certified Doctor</h3>
+            <p className="text-gray-700">Recognized by government authorities</p>
+          </div>
         </div>
-    );
-}
+      
+      </div>
+      <div className="max-w-screen-md mx-auto mt-2">
+
+  <div className="bg-white rounded-lg shadow-md p-2">
+    <ul>
+      <li className="text-lg font-semibold mb-2"> <span className='font-bold text-red '> SPECIALITY: </span>Emergency Medicine Casualty , RTA Trauma, Epilepsy, Seizure, Haematoma,Renal,Apsis,OT</li>
+    </ul>
+  </div>
+</div>
+  <div className="mt-3">
+          <Link to="/about" className="bg-blue-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+            Know more about me
+          </Link>
+        </div>
+
+
+
+    </div>
+  );
+};
+
+export default Home;

@@ -1,0 +1,26 @@
+.slider-container {
+    width: 100%;
+    max-width: 800px; /* Adjust max-width as needed */
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+  
+  .slide {
+    flex: 0 0 auto;
+    width: 100%;
+    scroll-snap-align: start;
+  }
+  
+  .slide img {
+    max-width: 100%;
+    height: auto;
+  }
+  

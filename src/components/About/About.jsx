@@ -28,7 +28,7 @@ class About extends React.Component {
               <img src={doc4} alt="Document 4" />
             </div>
           </div>
-          <p>Slide here for more images --> </p>
+          <p>Slide here for more images </p>
         </div>
       </div>
     );

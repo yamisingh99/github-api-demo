@@ -1,6 +1,6 @@
 {
   "name": "07reactrouter",
-  "homepage": "https://github.io/yamisingh99/Doctors-portfolio.git",
+  "homepage": "https://yamisingh99.github.io/Doctors-portfolio.git",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -17,7 +17,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.15.0"
-    
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
